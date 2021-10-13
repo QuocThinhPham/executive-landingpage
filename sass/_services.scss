@@ -1,0 +1,110 @@
+.services {
+    background-color: #fefefe;
+    padding: 122px 0 126px;
+    & .section-header {
+        margin-bottom: 110px;
+    }
+    &-list {
+        grid-template-columns: repeat(6, 148px);
+        grid-template-rows: repeat(2, 351px);
+        gap: 56px 47px;
+    }
+    &-item {
+        background-color: white;
+        padding: 30px;
+        box-shadow: 0px 0px 77px rgba(0, 0, 0, 0.06);
+        border-radius: 12px;
+
+        &:first-child {
+            grid-area: pos1;
+        }
+        &:nth-child(2) {
+            grid-area: pos2;
+        }
+        &:nth-child(3) {
+            grid-area: pos3;
+        }
+        &:nth-child(4) {
+            grid-area: pos4;
+        }
+        &:last-child {
+            grid-area: pos5;
+        }
+    }
+    &-icon {
+        margin-bottom: 30px;
+        width: 76px;
+        height: 76px;
+        border-radius: 100rem;
+        background-color: var(--bg-color);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img {
+            width: 37px;
+            height: 37px;
+        }
+    }
+    &-name {
+        margin-bottom: 9px;
+    }
+    &-desc {
+        margin-bottom: 25px;
+    }
+
+    @media screen and (min-width: 768px) {
+        .services-list {
+            display: grid;
+            grid-template-areas:
+                "pos1 pos1 pos2 pos2"
+                "pos3 pos3 pos4 pos4"
+                "null1 pos5 pos5 null2";
+        }
+    }
+    @media screen and (min-width: 1280px) {
+        .services-list {
+            grid-template-areas:
+                "pos1 pos1 pos2 pos2 pos3 pos3"
+                "null1 pos4 pos4 pos5 pos5 null2";
+        }
+    }
+
+    @media screen and (max-width: 1279px) {
+        padding: 60px 0;
+
+        .services-list {
+            grid-template-columns: repeat(4, 152px);
+            grid-template-rows: repeat(3, 1fr);
+            gap: 47px;
+        }
+    }
+
+    @media screen and (max-width: 1023px) {
+        padding: 40px 0;
+
+        .section-header {
+            margin-bottom: 50px;
+        }
+        .services-list {
+            grid-template-columns: repeat(4, 130px);
+            gap: 30px;
+        }
+        .services-icon {
+            width: 56px;
+            height: 56px;
+            margin-bottom: 20px;
+        }
+        .services-desc {
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+    }
+    @media screen and (max-width: 767px) {
+        .services-list {
+            padding: 0 50px;
+            display: flex;
+            flex-direction: column;
+            gap: 30px 0;
+        }
+    }
+}

@@ -1,0 +1,73 @@
+body {
+    font-family: $font;
+    font-size: 16px;
+    line-height: 1;
+    color: $text-color;
+    overflow-x: hidden;
+}
+
+button {
+    cursor: pointer;
+    outline: none;
+    border: none;
+    font-family: $font;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: $text-color;
+    font-weight: bold;
+}
+
+.wrapper {
+    max-width: 1440px;
+    margin: 0 auto;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1148px;
+    margin: 0 auto;
+}
+
+.section {
+    &-header {
+        max-width: 949px;
+        margin: 0 auto;
+    }
+    &-container {
+        max-width: max-content;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width: 1279px) {
+    .section-header {
+        max-width: 750px;
+        margin-bottom: 50px;
+    }
+}
+
+@media screen and (max-width: 1023px) {
+    .section-header {
+        max-width: 750px;
+        margin-bottom: 50px;
+    }
+    .section-header .text {
+        font-size: 18px;
+    }
+    .section-header {
+        max-width: 650px;
+        margin-bottom: 35px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .section-header {
+        max-width: 320px;
+    }
+}

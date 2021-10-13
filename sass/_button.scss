@@ -1,0 +1,72 @@
+.btn {
+    display: inline-block;
+    font-size: 22px;
+    font-weight: 500;
+    font-family: $font;
+    line-height: 1;
+    border-radius: 9px;
+    cursor: pointer;
+    padding: 12px 34px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 262px;
+
+    &--primary {
+        background-color: $primary-color;
+        color: white;
+        border: 2px solid $primary-color;
+        line-height: calc(40 / 20);
+        transition: 0.2s;
+        min-width: 262px;
+
+        @media screen and (max-width: 1279px) {
+            padding: 10px 17px;
+        }
+
+        @media screen and (max-width: 1023px) {
+            font-size: 16px;
+            padding: 5px 15px 5px 20px;
+            max-width: 180px;
+            min-width: 150px;
+        }
+    }
+
+    &--outlined {
+        font-size: 17px;
+        padding: 9px 32px;
+        background-color: transparent;
+        border: 1px solid $primary-color;
+        color: $text-color;
+        transition: 0.2s;
+    }
+
+    &--more {
+        padding: 0;
+        font-size: 17px;
+        font-weight: 700;
+        letter-spacing: 0.44px;
+        color: $primary-color;
+        width: 100%;
+        max-width: 133px;
+    }
+
+    &--join {
+        max-width: 226px;
+        line-height: calc(40 / 22);
+        color: white;
+        background-color: $primary-color;
+        margin: 0 auto;
+
+        @media screen and (max-width: 1279px) {
+            padding: 10px 17px;
+        }
+
+        @media screen and (max-width: 1023px) {
+            font-size: 16px;
+            padding: 5px 15px 5px 20px;
+            max-width: 160px;
+            min-width: 150px;
+        }
+    }
+}

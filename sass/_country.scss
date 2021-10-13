@@ -1,0 +1,50 @@
+.country {
+    background-color: $white-darker;
+    padding: 82px 0 136px;
+    & .section-header {
+        margin-bottom: 77px;
+    }
+    & .section-container {
+        max-width: 1136px;
+    }
+    &-image {
+        margin-bottom: 27px;
+        & > img {
+            border-radius: 29px;
+        }
+    }
+    &-content {
+        h3 {
+            margin-bottom: 11px;
+        }
+    }
+
+    // slick slider
+    .slick-list {
+        margin-bottom: 80px;
+        padding: 10px 0;
+    }
+    .slick-track {
+        display: flex;
+        gap: 0 47px;
+        margin-left: -8px;
+    }
+
+    @media screen and (max-width: 1279px) {
+        padding: 85px 0 68px;
+        .slick-list {
+            margin-bottom: 50px;
+        }
+    }
+
+    @media screen and (max-width: 1023px) {
+        padding: 65px 0;
+    }
+
+    @media screen and (max-width: 1023px) {
+        padding: 65px 0;
+        .slick-list {
+            margin-bottom: 20px;
+        }
+    }
+}

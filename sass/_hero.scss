@@ -1,0 +1,135 @@
+.hero {
+    padding: 54px 0 0;
+    position: relative;
+
+    &::after {
+        content: "";
+        position: absolute;
+        bottom: -162px;
+        right: -451px;
+        z-index: -1;
+        display: block;
+        width: 1030px;
+        height: 581px;
+        background: linear-gradient(189.79deg, #8471ff 8.03%, #717cff 53.55%);
+        clip-path: ellipse(50% 50% at 50% 50%);
+        opacity: 0.7;
+    }
+
+    &-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 0 62px;
+    }
+    &-content {
+        width: 100%;
+        max-width: 632px;
+    }
+    &-heading {
+        font-size: 56px;
+        font-weight: 900;
+        line-height: calc(65 / 56);
+        margin-bottom: 15px;
+        color: $heading-color;
+
+        & > span {
+            color: $primary-color;
+        }
+    }
+    &-desc {
+        font-size: 22px;
+        font-weight: 500;
+        line-height: calc(38 / 22);
+        color: $desc-color;
+        margin-bottom: 40px;
+    }
+
+    @media screen and (max-width: 1279px) {
+        padding-top: 30px;
+
+        &::after {
+            bottom: -200px;
+            right: -540px;
+        }
+
+        .hero-container {
+            padding: 0 70px;
+            gap: 0;
+        }
+
+        .hero-content {
+            max-width: 516px;
+        }
+
+        .hero-heading {
+            font-size: 50px;
+            line-height: calc(65 / 50);
+        }
+
+        .hero-desc {
+            font-size: 16px;
+        }
+    }
+
+    @media screen and (max-width: 1023px) {
+        padding-top: 20px;
+
+        &::after {
+            bottom: -240px;
+            right: -590px;
+        }
+
+        .hero-container {
+            padding: 0 30px;
+        }
+
+        .hero-content {
+            max-width: 350px;
+        }
+        .hero-heading {
+            font-size: 40px;
+        }
+    }
+
+    @media screen and (max-width: 767px) {
+        &::after {
+            top: 65px;
+            left: 30px;
+            width: 830px;
+            height: 381px;
+        }
+
+        .hero-container {
+            flex-direction: column-reverse;
+            gap: 15px 0;
+        }
+
+        .hero-heading {
+            font-size: 35px;
+        }
+
+        .hero-desc {
+            font-size: 13px;
+            margin-bottom: 20px;
+        }
+
+        .socials {
+            margin-top: 20px;
+        }
+    }
+}
+
+.socials {
+    margin-top: 30px;
+    ul {
+        display: flex;
+        align-items: center;
+    }
+    &-item {
+        margin-right: 15px;
+        :first-child {
+            margin-right: 23px;
+        }
+    }
+}

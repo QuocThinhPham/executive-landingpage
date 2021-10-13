@@ -1,0 +1,70 @@
+.header {
+    &-container {
+        padding: 40px 108px 60px 150px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @media screen and (max-width: 1279px) {
+            padding: 40px;
+        }
+
+        @media screen and (max-width: 1023px) {
+            padding: 30px 100px 20px;
+        }
+
+        @media screen and (max-width: 767px) {
+            padding: 20px 20px 10px;
+        }
+    }
+    &-navigation {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0 70px;
+
+        @media screen and (max-width: 1279px) {
+            gap: 0 40px;
+        }
+    }
+}
+.menu {
+    ul {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 0 70px;
+
+        @media screen and (max-width: 1279px) {
+            gap: 0 40px;
+        }
+    }
+    &-item {
+        position: relative;
+        padding: 10px 0;
+
+        &::before {
+            content: "";
+            width: 0;
+            height: 3px;
+            position: absolute;
+            bottom: 0;
+            border-radius: 2px;
+            background-color: $primary-color;
+            transition: width 0.2s;
+        }
+
+        &:hover::before {
+            width: 50%;
+        }
+    }
+    &-link {
+        font-size: 17px;
+        font-weight: 500;
+        color: $text-color;
+    }
+
+    @media screen and (max-width: 1023px) {
+        display: none;
+    }
+}

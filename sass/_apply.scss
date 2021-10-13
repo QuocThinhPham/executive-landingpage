@@ -1,0 +1,40 @@
+.apply {
+    background-color: $white-darker;
+    padding: 82px 150px 74px;
+    &-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    & .heading {
+        margin-bottom: 0;
+    }
+
+    @media screen and (max-width: 1279px) {
+        .heading {
+            font-size: 30px;
+        }
+    }
+
+    @media screen and (max-width: 1023px) {
+        padding-left: 50px;
+        padding-right: 50px;
+
+        .btn--primary img {
+            margin-left: 20px;
+        }
+    }
+
+    @media screen and (max-width: 767px) {
+        padding-top: 50px;
+        padding-bottom: 50px;
+        .apply-container {
+            flex-direction: column;
+        }
+
+        .heading {
+            font-size: 22px;
+            margin-bottom: 20px;
+        }
+    }
+}
